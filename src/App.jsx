@@ -1,10 +1,15 @@
-import HeaderComponent from "./components/HeaderComponent"
-
+import { Route, Routes } from "react-router-dom"
+import  DefaultLayout  from './layouts/DefaultLayout'
+import HomePage from "./pages/HomePage"
 function App() {
 
   return (
     <>
-    <div className="text-success">ENTRATA APP</div>
+      <Routes>
+        <Route element={<DefaultLayout />}>
+          <Route index element={<HomePage/>}/>
+        </Route>
+      </Routes>
     </>
   )
 }
