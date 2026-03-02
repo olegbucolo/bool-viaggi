@@ -2,8 +2,8 @@ export default function HeaderComponent() {
     return (
         <header className="">
 
-            <nav className="navbar mx-auto navbar-expand-lg" style={{maxWidth: '1200px'}}>
-                <div className="container-fluid">
+            <nav className="navbar bg-light bg-opacity-45 mx-auto navbar-expand-lg" >
+                <div className="container-fluid" style={{maxWidth: '1200px'}}>
                     <a className="navbar-brand" href="#"><span className="text-success">B</span>ool-viaggi</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
