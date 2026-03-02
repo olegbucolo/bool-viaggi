@@ -1,0 +1,14 @@
+.my-scrollbar {
+  overflow-y: scroll;
+}
+
+.my-image-card {
+  height: 50px !important;
+  background-image: linear-gradient(to right, rgb(255, 255, 255), rgba(0, 0, 0, 0)), url('https://picsum.photos/400/200');
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+body{
+  background-color: #fbfbfb;
+}

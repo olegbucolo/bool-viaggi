@@ -2,7 +2,7 @@ export default function HeaderComponent() {
     return (
         <header className="">
 
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+            <nav className="navbar mx-auto navbar-expand-lg" style={{maxWidth: '1200px'}}>
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#"><span className="text-success">B</span>ool-viaggi</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,14 +19,11 @@ export default function HeaderComponent() {
                             <li className="nav-item dropdown">
                              
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link disabled" aria-disabled="true">Info</a>
-                            </li>
                         </ul>
-                        <form className="d-flex" role="search">
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button className="btn btn-outline-success" type="submit">Search</button>
-                        </form>
+                            <div className="nav-item  ">
+                                <a href="#" className="nav-link  " aria-disabled="true">Login</a>
+                            </div>
+                        
                     </div>
                 </div>
             </nav>

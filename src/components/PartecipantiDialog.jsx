@@ -1,10 +1,20 @@
 import partecipanti from '../data/partecipanti'
 import PartecipanteInfo from './PartecipanteInfo';
+import { useState } from 'react'
+
 
 export default function PartecipantiDialog({ viaggioId, viaggi }) {
+    const [search, setSearch] = useState('')
     const modalId = `staticBackdrop-${viaggioId}a`;
 
-    const filteredPartecipanti = partecipanti.filter(p => p.viaggioId.includes(Number(viaggioId)))
+    const handleSearch = (e) => {
+        setSearch(e.target.value)
+        console.log(search)
+    }
+
+    const filteredPartecipanti = partecipanti.filter(p => p.viaggioId.includes(Number(viaggioId))
+        && (p.nome.toLocaleLowerCase().includes(search.toLocaleLowerCase())
+            || p.cognome.toLowerCase().includes(search.toLowerCase())))
     return (
         <>
             <button
@@ -17,7 +27,7 @@ export default function PartecipantiDialog({ viaggioId, viaggi }) {
             </button>
 
             <div
-                className="modal fade"
+                className="modal fade my-scrollbar"
                 id={modalId}
                 data-bs-backdrop="static"
                 data-bs-keyboard="false"
@@ -28,7 +38,7 @@ export default function PartecipantiDialog({ viaggioId, viaggi }) {
                     <div className="modal-content">
                         <div className="modal-header">
                             <h1 className="modal-title fs-5">
-                                Modal title
+                                Lista Partecipanti
                             </h1>
                             <button
                                 type="button"
@@ -38,11 +48,20 @@ export default function PartecipantiDialog({ viaggioId, viaggi }) {
                             />
                         </div>
 
+                        <div className="d-flex mx-3 mt-3" >
+                            <input
+                                value={search}
+                                onChange={handleSearch}
+                                className="form-control"
+                                type="text"
+                                placeholder="Cerca Partecipanti..."
+                            />
+                        </div>
+
                         <div className="modal-body ">
                             {filteredPartecipanti.map(p => (
-                                <div key={p.id} className="d-flex justify-content-between align-items-center mb-4">
-                                    {/* <div>{p.nome} {p.cognome}</div> */}
-                                    <PartecipanteInfo pNome={p.nome} pCognome={p.cognome} />
+                                <div key={p.id} className="d-flex justify-content-between align-items-center mb-2">
+                                    <PartecipanteInfo p={p} />
                                 </div>
                             ))}
                         </div>
@@ -53,14 +72,9 @@ export default function PartecipantiDialog({ viaggioId, viaggi }) {
                                 className="btn btn-secondary"
                                 data-bs-dismiss="modal"
                             >
-                                Close
+                                Esci
                             </button>
-                            <button
-                                type="button"
-                                className="btn btn-primary"
-                            >
-                                Understood
-                            </button>
+                            
                         </div>
                     </div>
                 </div>

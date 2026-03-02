@@ -1,20 +1,20 @@
-export default function ({ pNome, pCognome }) {
+export default function ({ p }) {
 
-    const pId = `${pNome}${pCognome}`
+    const pId = `${p.nome}${p.cognome}`
     return (
         <>
             <div className="accordion w-100" id={`accordion-${pId}`}>
                 <div className="accordion-item">
-                    <h2 className="accordion-header">
+                    <h2 className="accordion-header my-image-card">
                         <button
-                            className="accordion-button"
+                            className="accordion-button "
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target={`#collapse-${pId}`}
                             aria-expanded="false"
                             aria-controls={`collapse-${pId}`}
                         >
-                            {pNome}
+                            {p.nome} {p.cognome}
                         </button>
                     </h2>
                     <div
@@ -23,7 +23,9 @@ export default function ({ pNome, pCognome }) {
                         data-bs-parent={`#accordion-${pId}`} // parent is unique
                     >
                         <div className="accordion-body">
-                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, molestiae? {/* Nested accordion here, with its own unique IDs */}
+                            <p><span className="fw-bold">Email:</span> {p.email} </p>
+                            <p><span className="fw-bold">Telefono:</span> {p.telefono} </p>
+                            <p><span className="fw-bold">Codice Fiscale:</span> {p.codiceFiscale} </p>
                         </div>
                     </div>
                 </div>
