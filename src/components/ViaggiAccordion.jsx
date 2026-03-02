@@ -5,8 +5,8 @@ export default function ViaggiAccordion() {
     return (
         <div className="mx-auto accordion mt-4" style={{ maxWidth: '800px' }}  id="accordionExample">
             {viaggi.map((viaggio) => (
-                <div className="accordion-item rounded-2" key={viaggio.id}>
-                    <h2 className="accordion-header  m-2">
+                <div className="accordion-item rounded-2 mb-2" key={viaggio.id}>
+                    <h2 className="accordion-header">
                         <button
                             className="accordion-button rounded-2 collapsed"
                             type="button"

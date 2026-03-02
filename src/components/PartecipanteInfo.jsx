@@ -5,9 +5,9 @@ export default function ({ p }) {
         <>
             <div className="accordion w-100" id={`accordion-${pId}`}>
                 <div className="accordion-item">
-                    <h2 className="accordion-header my-image-card">
+                    <h2 className="accordion-header">
                         <button
-                            className="accordion-button "
+                            className="accordion-button collapsed"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target={`#collapse-${pId}`}
