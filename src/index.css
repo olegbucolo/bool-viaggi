@@ -11,6 +11,7 @@
 
 body{
   background-color: #fbfbfb;
+  background-image: url('https://picsum.photos/3200/1600');
 }
 
 .accordion-button::after {
