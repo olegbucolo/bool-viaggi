@@ -13,3 +13,6 @@ body{
   background-color: #fbfbfb;
 }
 
+.accordion-button::after {
+  filter: invert(1); /* inverts color so arrow becomes white on dark backgrounds */
+}

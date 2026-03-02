@@ -13,7 +13,7 @@ export default function ViaggiAccordion() {
                             style={{
                                 backgroundColor: 'white',
                                 height: '100px',
-                                backgroundImage: `linear-gradient(to right, rgba(255,255,255,1), rgba(0,0,0,0)), url('https://picsum.photos/400/200?random=${viaggio.id}')`,
+                                backgroundImage: `linear-gradient(to right, rgba(255,255,255,1), rgba(0,0,0,0)), url('https://picsum.photos/3200/1600?random=${viaggio.id}')`,
                                 backgroundSize: 'cover',
                                 backgroundPosition: 'center',
                             }}

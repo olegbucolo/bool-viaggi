@@ -3,11 +3,11 @@ export default function ({ p }) {
     const pId = `${p.nome}${p.cognome}`
     return (
         <>
-            <div className="accordion w-100" id={`accordion-${pId}`}>
+            <div className="accordion  w-100"id={`accordion-${pId}`}>
                 <div className="accordion-item">
                     <h2 className="accordion-header">
                         <button
-                            className="accordion-button collapsed"
+                            className="bg-dark  text-white accordion-button  collapsed"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target={`#collapse-${pId}`}
